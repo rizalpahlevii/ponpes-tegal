@@ -67,7 +67,7 @@ switch ($act) {
 									<div class="col-lg-6">
 										<select id="e2" class="populate " name="id_user" class="form-control round-input" style="width: 550px">
 											<?php
-											$sql_angkatan = mysqli_query($conn, "SELECT * FROM `pegawai` WHERE `bagian` = 'Non-Akademik'");
+											$sql_angkatan = mysqli_query($conn, "SELECT * FROM `pegawai`");
 											while ($k = mysqli_fetch_assoc($sql_angkatan)) {
 												if (isset($c['nip']) && $k['nip'] == $c['nip']) {
 													echo "<option value='$k[nip]' selected>$k[nip] - $k[nama]</option>";
